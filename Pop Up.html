@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup Modal Box</title>
+
+    <link rel="stylesheet" href="Pop Up.css" />
+
+    <!-- Fontawesome CDN Link -->
+    <link
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <button class="show-modal">Yakin Mau Rental?</button>
+      <span class="overlay"></span>
+
+      <div class="modal-box">
+        <i class="fa-regular fa-circle-check"></i>
+        <h2>Selamat</h2>
+        <h3>"Kamu Sudah Berhasil Menyewa Salah Satu Mobil Dari Showroom Kita"</h3>
+
+        <div class="buttons">
+          <center><button class="close-btn">Ok, Kembali</button></center>
+        </div>
+      </div>
+          <center><a href="Data Mobil.html"><input type="button" value=Back>
+    </section>
+
+    <script>
+      const section = document.querySelector("section"),
+        overlay = document.querySelector(".overlay"),
+        showBtn = document.querySelector(".show-modal"),
+        closeBtn = document.querySelector(".close-btn");
+
+      showBtn.addEventListener("click", () => section.classList.add("active"));
+
+      overlay.addEventListener("click", () =>
+        section.classList.remove("active")
+      );
+
+      closeBtn.addEventListener("click", () =>
+        section.classList.remove("active")
+      );
+    </script>
+  </body>
+</html>
